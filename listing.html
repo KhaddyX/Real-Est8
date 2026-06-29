@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Beautiful 4 bedroom, 3 bathroom home for sale at 123 Main Street in [City Name]. 2,400 sqft, listed at $749,000."
+    />
+    <title>123 Main Street - Home for Sale in [City Name] - [Agent Name]</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">[Agent Name]</a>
+          <button
+            class="mobile-menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul>
+              <li><a href="listings.html" class="active">Listings</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="neighborhood.html">Neighborhoods</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="tel:+15555551234" class="header-phone">555-555-1234</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Image Gallery -->
+      <section class="listing-gallery">
+        <div class="gallery-main">
+          <img
+            id="mainImage"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&h=1000&fit=crop"
+            alt="123 Main Street - Main view"
+            loading="eager"
+          />
+          <button
+            class="gallery-nav gallery-prev"
+            onclick="changeImage(-1)"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+          <button
+            class="gallery-nav gallery-next"
+            onclick="changeImage(1)"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+        </div>
+        <div class="gallery-thumbnails" id="thumbnailContainer">
+          <button class="thumbnail active" onclick="showImage(0)">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=200&fit=crop"
+              alt="Main view"
+            />
+          </button>
+          <button class="thumbnail" onclick="showImage(1)">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&h=200&fit=crop"
+              alt="Living room"
+            />
+          </button>
+          <button class="thumbnail" onclick="showImage(2)">
+            <img
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=300&h=200&fit=crop"
+              alt="Kitchen"
+            />
+          </button>
+          <button class="thumbnail" onclick="showImage(3)">
+            <img
+              src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=300&h=200&fit=crop"
+              alt="Master bedroom"
+            />
+          </button>
+          <button class="thumbnail" onclick="showImage(4)">
+            <img
+              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&h=200&fit=crop"
+              alt="Bathroom"
+            />
+          </button>
+          <button class="thumbnail" onclick="showImage(5)">
+            <img
+              src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=300&h=200&fit=crop"
+              alt="Backyard"
+            />
+          </button>
+        </div>
+      </section>
+
+      <!-- Property Details -->
+      <section class="listing-detail">
+        <div class="container">
+          <div class="listing-layout">
+            <!-- Main Content -->
+            <div class="listing-main">
+              <div class="listing-header">
+                <div class="listing-title">
+                  <h1>123 Main Street</h1>
+                  <p class="listing-location">
+                    Downtown District, [City Name], [State] 12345
+                  </p>
+                </div>
+                <div class="listing-price-large">$749,000</div>
+              </div>
+
+              <div class="listing-stats">
+                <div class="stat-item">
+                  <div class="stat-value">4</div>
+                  <div class="stat-label">Bedrooms</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">3</div>
+                  <div class="stat-label">Bathrooms</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">2,400</div>
+                  <div class="stat-label">Square Feet</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">0.25</div>
+                  <div class="stat-label">Acres</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">2018</div>
+                  <div class="stat-label">Year Built</div>
+                </div>
+              </div>
+
+              <div class="listing-description">
+                <h2>Welcome Home</h2>
+                <p>
+                  This stunning 4-bedroom, 3-bathroom home in the heart of
+                  Downtown District offers the perfect blend of modern luxury
+                  and comfortable living. Built in 2018, this meticulously
+                  maintained property features an open-concept floor plan with
+                  abundant natural light throughout.
+                </p>
+
+                <p>
+                  The gourmet kitchen boasts stainless steel appliances, granite
+                  countertops, and a large center island perfect for
+                  entertaining. The spacious master suite includes a walk-in
+                  closet and spa-like ensuite bathroom with dual vanities and a
+                  soaking tub.
+                </p>
+
+                <p>
+                  Step outside to your private backyard oasis with a covered
+                  patio, perfect for outdoor dining and relaxation. The property
+                  is within walking distance to top-rated schools, parks,
+                  restaurants, and shopping.
+                </p>
+
+                <h3>Key Features</h3>
+                <ul class="feature-list">
+                  <li>Updated kitchen with granite countertops</li>
+                  <li>Hardwood floors throughout main living areas</li>
+                  <li>Master suite with walk-in closet and luxury bath</li>
+                  <li>Open-concept living and dining areas</li>
+                  <li>Energy-efficient windows and appliances</li>
+                  <li>Two-car attached garage</li>
+                  <li>Covered patio and landscaped backyard</li>
+                  <li>Smart home features including thermostat and doorbell</li>
+                  <li>Close to schools, parks, and downtown amenities</li>
+                </ul>
+              </div>
+
+              <div class="listing-features">
+                <h2>Features & Amenities</h2>
+                <div class="features-grid">
+                  <div class="feature-column">
+                    <h4>Interior</h4>
+                    <ul>
+                      <li>Hardwood Floors</li>
+                      <li>Granite Countertops</li>
+                      <li>Stainless Steel Appliances</li>
+                      <li>Walk-in Closets</li>
+                      <li>Ceiling Fans</li>
+                      <li>Recessed Lighting</li>
+                    </ul>
+                  </div>
+                  <div class="feature-column">
+                    <h4>Exterior</h4>
+                    <ul>
+                      <li>Attached Garage</li>
+                      <li>Covered Patio</li>
+                      <li>Landscaped Yard</li>
+                      <li>Sprinkler System</li>
+                      <li>Fenced Backyard</li>
+                      <li>Driveway</li>
+                    </ul>
+                  </div>
+                  <div class="feature-column">
+                    <h4>Systems</h4>
+                    <ul>
+                      <li>Central Air Conditioning</li>
+                      <li>Forced Air Heating</li>
+                      <li>Smart Thermostat</li>
+                      <li>Tank Water Heater</li>
+                      <li>Energy Efficient Windows</li>
+                      <li>Security System</li>
+                    </ul>
+                  </div>
+                  <div class="feature-column">
+                    <h4>Community</h4>
+                    <ul>
+                      <li>Top-Rated Schools</li>
+                      <li>Parks Nearby</li>
+                      <li>Shopping & Dining</li>
+                      <li>Public Transportation</li>
+                      <li>Low HOA Fees</li>
+                      <li>Walkable Neighborhood</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="listing-map">
+                <h2>Location & Neighborhood</h2>
+                <div class="map-container">
+                  <!-- Placeholder for map - Replace with actual map integration -->
+                  <img
+                    src="https://via.placeholder.com/1200x400?text=Map+View"
+                    alt="Property location map"
+                    loading="lazy"
+                  />
+                </div>
+                <p class="map-description">
+                  Located in the desirable Downtown District, this home offers
+                  convenient access to schools, parks, shopping, and dining.
+                  Walk Score: 85
+                </p>
+                <a href="neighborhood.html" class="text-link"
+                  >Learn About Downtown District →</a
+                >
+              </div>
+
+              <div class="similar-listings">
+                <h2>You Might Also Like</h2>
+                <div class="listings-grid">
+                  <!-- Similar Listing 1 -->
+                  <article class="listing-card">
+                    <a href="listing.html" class="listing-link">
+                      <div class="listing-image">
+                        <img
+                          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop"
+                          alt="789 Elm Street"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="listing-info">
+                        <div class="listing-price">$625,000</div>
+                        <div class="listing-address">789 Elm Street</div>
+                        <div class="listing-details">
+                          <span>3 beds</span>
+                          <span>•</span>
+                          <span>2 baths</span>
+                          <span>•</span>
+                          <span>1,800 sqft</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <!-- Similar Listing 2 -->
+                  <article class="listing-card">
+                    <a href="listing.html" class="listing-link">
+                      <div class="listing-image">
+                        <img
+                          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+                          alt="456 Oak Avenue"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="listing-info">
+                        <div class="listing-price">$895,000</div>
+                        <div class="listing-address">456 Oak Avenue</div>
+                        <div class="listing-details">
+                          <span>5 beds</span>
+                          <span>•</span>
+                          <span>4 baths</span>
+                          <span>•</span>
+                          <span>3,200 sqft</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                  <!-- Similar Listing 3 -->
+                  <article class="listing-card">
+                    <a href="listing.html" class="listing-link">
+                      <div class="listing-image">
+                        <img
+                          src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=800&h=600&fit=crop"
+                          alt="246 Sunset Boulevard"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="listing-info">
+                        <div class="listing-price">$715,000</div>
+                        <div class="listing-address">246 Sunset Boulevard</div>
+                        <div class="listing-details">
+                          <span>4 beds</span>
+                          <span>•</span>
+                          <span>3 baths</span>
+                          <span>•</span>
+                          <span>2,300 sqft</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="listing-sidebar">
+              <div class="sidebar-sticky">
+                <div class="sidebar-card">
+                  <div class="sidebar-price">$749,000</div>
+                  <div class="sidebar-stats">
+                    <div class="sidebar-stat">
+                      <span class="stat-label">Beds:</span>
+                      <span class="stat-value">4</span>
+                    </div>
+                    <div class="sidebar-stat">
+                      <span class="stat-label">Baths:</span>
+                      <span class="stat-value">3</span>
+                    </div>
+                    <div class="sidebar-stat">
+                      <span class="stat-label">Sqft:</span>
+                      <span class="stat-value">2,400</span>
+                    </div>
+                    <div class="sidebar-stat">
+                      <span class="stat-label">Lot:</span>
+                      <span class="stat-value">0.25 ac</span>
+                    </div>
+                    <div class="sidebar-stat">
+                      <span class="stat-label">Built:</span>
+                      <span class="stat-value">2018</span>
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="openModal('showingModal')"
+                  >
+                    Schedule a Showing
+                  </button>
+                  <button
+                    class="btn btn-outline btn-block"
+                    onclick="openModal('questionModal')"
+                  >
+                    Ask a Question
+                  </button>
+                </div>
+
+                <div class="sidebar-card agent-card">
+                  <div class="agent-info">
+                    <img
+                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop"
+                      alt="[Agent Name]"
+                      class="agent-photo"
+                      loading="lazy"
+                    />
+                    <div class="agent-details">
+                      <h3>[Agent Name]</h3>
+                      <p>Your Local Expert</p>
+                    </div>
+                  </div>
+                  <a
+                    href="tel:+15555551234"
+                    class="btn btn-secondary btn-block"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                    555-555-1234
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="listing-bottom-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to See This Home?</h2>
+            <p>
+              Schedule your private showing today and experience this beautiful
+              property in person.
+            </p>
+            <button class="btn btn-primary" onclick="openModal('showingModal')">
+              Schedule Your Showing
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>[Agent Name]</h3>
+            <p>Your trusted real estate expert in [City Name]</p>
+            <div class="footer-contact">
+              <p><a href="tel:+15555551234">555-555-1234</a></p>
+              <p><a href="mailto:agent@example.com">agent@example.com</a></p>
+              <p>123 Business Street<br />[City], [State] 12345</p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="listings.html">Listings</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="neighborhood.html">Neighborhoods</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>© 2025 [Agent Name]. All rights reserved.</p>
+            <p class="footer-disclaimer">
+              Licensed Real Estate Agent in [State]. MLS Member. Equal Housing
+              Opportunity.
+            </p>
+          </div>
+          <div class="footer-logos">
+            <img
+              src="https://via.placeholder.com/80x60?text=EHO"
+              alt="Equal Housing Opportunity"
+              loading="lazy"
+            />
+            <img
+              src="https://via.placeholder.com/80x60?text=MLS"
+              alt="MLS Member"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: Schedule Showing -->
+    <div
+      id="showingModal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="showingModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <button
+          class="modal-close"
+          onclick="closeModal('showingModal')"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <h2 id="showingModalTitle">Schedule a Showing</h2>
+        <p>
+          Let me know when you'd like to see this property and I'll arrange
+          everything.
+        </p>
+        <form class="modal-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="showing-name">Name *</label>
+            <input type="text" id="showing-name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="showing-email">Email *</label>
+            <input type="email" id="showing-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="showing-phone">Phone *</label>
+            <input type="tel" id="showing-phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="showing-date">Preferred Date</label>
+            <input type="date" id="showing-date" name="date" />
+          </div>
+          <div class="form-group">
+            <label for="showing-message">Additional Details</label>
+            <textarea id="showing-message" name="message" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Request Showing
+          </button>
+          <p class="form-note">
+            Your information is safe. I'll never spam you.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal: Ask Question -->
+    <div
+      id="questionModal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="questionModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <button
+          class="modal-close"
+          onclick="closeModal('questionModal')"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <h2 id="questionModalTitle">Ask a Question</h2>
+        <p>Have questions about this property? I'm here to help.</p>
+        <form class="modal-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="question-name">Name *</label>
+            <input type="text" id="question-name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="question-email">Email *</label>
+            <input type="email" id="question-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="question-phone">Phone *</label>
+            <input type="tel" id="question-phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="question-message">Your Question *</label>
+            <textarea
+              id="question-message"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Send Question
+          </button>
+          <p class="form-note">
+            Your information is safe. I'll never spam you.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

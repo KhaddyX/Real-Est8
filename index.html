@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Find your dream home in [Alaska] with expert local real estate guidance. Professional service, proven results."
+    />
+    <title>[Title] - Real Estate Agent in [New Jersey]</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <script src="js/main.js"></script>
+  <body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">Real Est8</a>
+          <button
+            class="mobile-menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul>
+              <li><a href="listings.html">Listings</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="neighborhood.html">Neighborhoods</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="tel:+15555551234" class="header-phone">555-555-1234</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-background">
+          <!-- Placeholder: Replace with actual hero image -->
+          <img
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&h=900&fit=crop"
+            alt="Beautiful home in [Location]"
+            loading="eager"
+          />
+        </div>
+        <div class="hero-content">
+          <div class="container">
+            <h1>Find Your Dream Home in [Location]</h1>
+            <p class="hero-subheadline">
+              Local expertise. Personal service. Proven results since [Year].
+            </p>
+            <div class="hero-cta">
+              <button
+                class="btn btn-primary"
+                onclick="openModal('valuationModal')"
+              >
+                Get Your Free Home Valuation
+              </button>
+              <a href="listings.html" class="btn btn-secondary">Search Homes</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust Indicators -->
+      <section class="trust-indicators">
+        <div class="container">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <div class="trust-number">$50M+</div>
+              <div class="trust-label">in Sales</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path
+                    d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                  />
+                </svg>
+              </div>
+              <div class="trust-number">200+</div>
+              <div class="trust-label">Happy Clients</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+              </div>
+              <div class="trust-number">15</div>
+              <div class="trust-label">Years Experience</div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+              </div>
+              <div class="trust-number">Top 5%</div>
+              <div class="trust-label">in [City Name]</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Listings -->
+      <section class="featured-listings">
+        <div class="container">
+          <h2 class="section-title">Just Listed in [City Name]</h2>
+          <div class="listings-grid">
+            <!-- Listing Card 1 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <!-- Placeholder: Replace with actual listing images -->
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop"
+                    alt="Beautiful home at 123 Main Street"
+                    loading="lazy"
+                  />
+                  <span class="listing-badge">New</span>
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$749,000</div>
+                  <div class="listing-address">123 Main Street</div>
+                  <div class="listing-details">
+                    <span>4 beds</span>
+                    <span>•</span>
+                    <span>3 baths</span>
+                    <span>•</span>
+                    <span>2,400 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 2 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+                    alt="Modern home at 456 Oak Avenue"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$895,000</div>
+                  <div class="listing-address">456 Oak Avenue</div>
+                  <div class="listing-details">
+                    <span>5 beds</span>
+                    <span>•</span>
+                    <span>4 baths</span>
+                    <span>•</span>
+                    <span>3,200 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 3 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop"
+                    alt="Charming home at 789 Elm Street"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$625,000</div>
+                  <div class="listing-address">789 Elm Street</div>
+                  <div class="listing-details">
+                    <span>3 beds</span>
+                    <span>•</span>
+                    <span>2 baths</span>
+                    <span>•</span>
+                    <span>1,800 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 4 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=600&fit=crop"
+                    alt="Luxury home at 321 Pine Drive"
+                    loading="lazy"
+                  />
+                  <span class="listing-badge badge-reduced">Price Reduced</span>
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$1,150,000</div>
+                  <div class="listing-address">321 Pine Drive</div>
+                  <div class="listing-details">
+                    <span>6 beds</span>
+                    <span>•</span>
+                    <span>5 baths</span>
+                    <span>•</span>
+                    <span>4,100 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="section-cta">
+            <a href="listings.html" class="btn btn-outline">See All Listings</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Split -->
+      <section class="services-split">
+        <div class="container">
+          <h2 class="section-title">How I Help You Win</h2>
+          <div class="services-grid">
+            <!-- Buyers -->
+            <div class="service-card">
+              <h3>Buying a Home</h3>
+              <p>
+                I'll help you find the right home, negotiate the best price, and
+                navigate every step from offer to closing.
+              </p>
+              <ul class="service-benefits">
+                <li>Access to off-market listings</li>
+                <li>Expert negotiation that saves you money</li>
+                <li>Guidance through inspections and closing</li>
+              </ul>
+              <a href="listings.html" class="btn btn-primary"
+                >Start Your Home Search</a
+              >
+            </div>
+
+            <!-- Sellers -->
+            <div class="service-card">
+              <h3>Selling Your Home</h3>
+              <p>
+                Get top dollar with strategic pricing, professional marketing,
+                and a proven sales process.
+              </p>
+              <ul class="service-benefits">
+                <li>Free home valuation and market analysis</li>
+                <li>Professional photography and listing exposure</li>
+                <li>Negotiation expertise that maximizes your profit</li>
+              </ul>
+              <button
+                class="btn btn-primary"
+                onclick="openModal('valuationModal')"
+              >
+                Get Your Home Value
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Neighborhoods -->
+      <section class="neighborhoods">
+        <div class="container">
+          <h2 class="section-title">
+            Expert Knowledge of [] Neighborhoods
+          </h2>
+          <p class="section-intro">
+            Thinking of moving to [Huston]? I know these communities inside and
+            out—schools, amenities, market trends, and hidden gems.
+          </p>
+          <div class="neighborhoods-grid">
+            <!-- Neighborhood 1 -->
+            <article class="neighborhood-card">
+              <a href="neighborhood.html">
+                <div class="neighborhood-image">
+                  <!-- Placeholder: Replace with actual neighborhood images -->
+                  <img
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop"
+                    alt="Downtown District"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="neighborhood-info">
+                  <h3>Downtown District</h3>
+                  <p>
+                    Urban living with walkable restaurants, shops, and nightlife
+                  </p>
+                </div>
+              </a>
+            </article>
+
+            <!-- Neighborhood 2 -->
+            <article class="neighborhood-card">
+              <a href="neighborhood.html">
+                <div class="neighborhood-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1546540828-22ed5b57d0cf?w=800&h=600&fit=crop"
+                    alt="Oak Hill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="neighborhood-info">
+                  <h3>Oak Hill</h3>
+                  <p>Family-friendly suburb with top-rated schools and parks</p>
+                </div>
+              </a>
+            </article>
+
+            <!-- Neighborhood 3 -->
+            <article class="neighborhood-card">
+              <a href="neighborhood.html">
+                <div class="neighborhood-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop"
+                    alt="Riverside"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="neighborhood-info">
+                  <h3>Riverside</h3>
+                  <p>
+                    Waterfront community with scenic views and outdoor
+                    recreation
+                  </p>
+                </div>
+              </a>
+            </article>
+          </div>
+          <div class="section-cta">
+            <a href="neighborhood.html" class="text-link"
+              >View All Neighborhoods →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="section-title">What Clients Say</h2>
+          <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "[Agent Name] made buying our first home stress-free. Their
+                  knowledge of the market and negotiation skills saved us
+                  thousands. We couldn't be happier!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <!-- Placeholder: Replace with actual client photos or use initials -->
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+                    alt="Sarah Johnson"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="author-info">
+                  <div class="author-name">Sarah & Mike Johnson</div>
+                  <div class="author-detail">Bought in Downtown District</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Testimonial 2 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "We sold our home in just 5 days thanks to [Agent Name]'s
+                  marketing expertise. Professional, responsive, and got us over
+                  asking price!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+                    alt="David Chen"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="author-info">
+                  <div class="author-name">David Chen</div>
+                  <div class="author-detail">Sold in Oak Hill</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Testimonial 3 -->
+            <article class="testimonial-card">
+              <div class="testimonial-content">
+                <p>
+                  "As first-time buyers, we had lots of questions. [Agent Name]
+                  patiently guided us through every step and helped us find our
+                  perfect home within budget."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop"
+                    alt="Emily Rodriguez"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="author-info">
+                  <div class="author-name">Emily Rodriguez</div>
+                  <div class="author-detail">Bought in Riverside</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Preview -->
+      <section class="about-preview">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-image">
+              <!-- Placeholder: Replace with actual agent photo -->
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop"
+                alt="[Maxwell Lutz]"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-text">
+              <h2>Meet [Avalrado Kellam]</h2>
+              <p>
+                I've called [Texas] home for 15 years. As a former architect, I
+                combine deep local knowledge with a keen eye for property value.
+                I'm not about pushy sales tactics—I'm about finding the right
+                fit for you and your family.
+              </p>
+              <p>
+                Whether you're buying your first home or selling to upgrade,
+                I'll be with you every step of the way with honest advice and
+                expert guidance.
+              </p>
+              <a href="about.html" class="text-link">Get to Know Me →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="final-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Make Your Move?</h2>
+            <p>
+              Whether you're buying or selling, let's talk about your goals. No
+              pressure, just expert advice.
+            </p>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-primary"
+                >Schedule a Free Consultation</a
+              >
+              <a href="tel:+15555551234" class="btn btn-secondary"
+                >Call 555-555-1234</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>[Agent Name]</h3>
+            <p>Your trusted real estate expert in [Florida]</p>
+            <div class="footer-contact">
+              <p><a href="tel:+15555551234">555-555-1234</a></p>
+              <p><a href="mailto:agent@example.com">agent@example.com</a></p>
+              <p>123 Business Street<br />[City], [State] 12345</p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="listings.html">Listings</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="neighborhood.html">Neighborhoods</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>© 2025 [Su Ruiqiang]. All rights reserved.</p>
+            <p class="footer-disclaimer">
+              Licensed Real Estate Agent in [State]. MLS Member. Equal Housing
+              Opportunity.
+            </p>
+          </div>
+          <div class="footer-logos">
+            <img
+              src="https://via.placeholder.com/80x60?text=EHO"
+              alt="Equal Housing Opportunity"
+              loading="lazy"
+            />
+            <img
+              src="https://via.placeholder.com/80x60?text=MLS"
+              alt="MLS Member"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: Home Valuation -->
+    <div
+      id="valuationModal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="valuationModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <button
+          class="modal-close"
+          onclick="closeModal('valuationModal')"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <h2 id="valuationModalTitle">Get Your Free Home Valuation</h2>
+        <p>
+          Find out what your home is worth in today's market. No obligation,
+          just expert insight.
+        </p>
+        <form class="modal-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="valuation-name">Name *</label>
+            <input type="text" id="valuation-name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="valuation-email">Email *</label>
+            <input type="email" id="valuation-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="valuation-phone">Phone *</label>
+            <input type="tel" id="valuation-phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="valuation-address">Property Address *</label>
+            <input type="text" id="valuation-address" name="address" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Get My Home Value
+          </button>
+          <p class="form-note">
+            Your information is safe. I'll never spam you.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

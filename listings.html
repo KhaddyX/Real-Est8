@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse homes for sale in [City Name]. Updated listings with photos, prices, and details."
+    />
+    <title>Homes for Sale in [City Name] - [Agent Name]</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">[Agent Name]</a>
+          <button
+            class="mobile-menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="main-nav" id="mainNav">
+            <ul>
+              <li><a href="listings.html" class="active">Listings</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="neighborhood.html">Neighborhoods</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="tel:+15555551234" class="header-phone">555-555-1234</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1>Homes for Sale in [City Name]</h1>
+          <p>
+            Browse my current listings. Looking for something specific? Call me
+            at <a href="tel:+15555551234">555-555-1234</a> or request a private
+            showing.
+          </p>
+        </div>
+      </section>
+
+      <!-- Filter Bar -->
+      <section class="filter-section">
+        <div class="container">
+          <button
+            class="filter-toggle"
+            onclick="toggleFilters()"
+            aria-expanded="false"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="4" y1="21" x2="4" y2="14" />
+              <line x1="4" y1="10" x2="4" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="12" />
+              <line x1="12" y1="8" x2="12" y2="3" />
+              <line x1="20" y1="21" x2="20" y2="16" />
+              <line x1="20" y1="12" x2="20" y2="3" />
+              <line x1="1" y1="14" x2="7" y2="14" />
+              <line x1="9" y1="8" x2="15" y2="8" />
+              <line x1="17" y1="16" x2="23" y2="16" />
+            </svg>
+            Filters
+          </button>
+          <div class="filter-bar" id="filterBar">
+            <div class="filter-group">
+              <label for="price-min">Price Range</label>
+              <div class="filter-row">
+                <select id="price-min" name="price-min">
+                  <option value="">Min Price</option>
+                  <option value="200000">$200,000</option>
+                  <option value="300000">$300,000</option>
+                  <option value="400000">$400,000</option>
+                  <option value="500000">$500,000</option>
+                  <option value="600000">$600,000</option>
+                  <option value="700000">$700,000</option>
+                  <option value="800000">$800,000</option>
+                  <option value="900000">$900,000</option>
+                  <option value="1000000">$1,000,000</option>
+                </select>
+                <span class="filter-separator">to</span>
+                <select id="price-max" name="price-max">
+                  <option value="">Max Price</option>
+                  <option value="300000">$300,000</option>
+                  <option value="400000">$400,000</option>
+                  <option value="500000">$500,000</option>
+                  <option value="600000">$600,000</option>
+                  <option value="700000">$700,000</option>
+                  <option value="800000">$800,000</option>
+                  <option value="900000">$900,000</option>
+                  <option value="1000000">$1,000,000</option>
+                  <option value="1500000">$1,500,000+</option>
+                </select>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label for="bedrooms">Bedrooms</label>
+              <select id="bedrooms" name="bedrooms">
+                <option value="">Any</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="bathrooms">Bathrooms</label>
+              <select id="bathrooms" name="bathrooms">
+                <option value="">Any</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="property-type">Property Type</label>
+              <select id="property-type" name="property-type">
+                <option value="">All Types</option>
+                <option value="house">House</option>
+                <option value="condo">Condo</option>
+                <option value="townhouse">Townhouse</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="neighborhood">Neighborhood</label>
+              <select id="neighborhood" name="neighborhood">
+                <option value="">All Neighborhoods</option>
+                <option value="downtown">Downtown District</option>
+                <option value="oakhill">Oak Hill</option>
+                <option value="riverside">Riverside</option>
+                <option value="westside">Westside</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" onclick="applyFilters()">
+              Apply Filters
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Listings Grid -->
+      <section class="listings-page">
+        <div class="container">
+          <div class="listings-results">
+            <p class="results-count">Showing 12 properties</p>
+          </div>
+          <div class="listings-grid">
+            <!-- Listing Card 1 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop"
+                    alt="Beautiful home at 123 Main Street"
+                    loading="lazy"
+                  />
+                  <span class="listing-badge">New</span>
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$749,000</div>
+                  <div class="listing-address">123 Main Street</div>
+                  <div class="listing-details">
+                    <span>4 beds</span>
+                    <span>•</span>
+                    <span>3 baths</span>
+                    <span>•</span>
+                    <span>2,400 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 2 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+                    alt="Modern home at 456 Oak Avenue"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$895,000</div>
+                  <div class="listing-address">456 Oak Avenue</div>
+                  <div class="listing-details">
+                    <span>5 beds</span>
+                    <span>•</span>
+                    <span>4 baths</span>
+                    <span>•</span>
+                    <span>3,200 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 3 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop"
+                    alt="Charming home at 789 Elm Street"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$625,000</div>
+                  <div class="listing-address">789 Elm Street</div>
+                  <div class="listing-details">
+                    <span>3 beds</span>
+                    <span>•</span>
+                    <span>2 baths</span>
+                    <span>•</span>
+                    <span>1,800 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 4 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&h=600&fit=crop"
+                    alt="Luxury home at 321 Pine Drive"
+                    loading="lazy"
+                  />
+                  <span class="listing-badge badge-reduced">Price Reduced</span>
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$1,150,000</div>
+                  <div class="listing-address">321 Pine Drive</div>
+                  <div class="listing-details">
+                    <span>6 beds</span>
+                    <span>•</span>
+                    <span>5 baths</span>
+                    <span>•</span>
+                    <span>4,100 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 5 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop"
+                    alt="Cozy home at 555 Maple Court"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$485,000</div>
+                  <div class="listing-address">555 Maple Court</div>
+                  <div class="listing-details">
+                    <span>3 beds</span>
+                    <span>•</span>
+                    <span>2 baths</span>
+                    <span>•</span>
+                    <span>1,650 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 6 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&h=600&fit=crop"
+                    alt="Spacious home at 777 Cedar Lane"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$825,000</div>
+                  <div class="listing-address">777 Cedar Lane</div>
+                  <div class="listing-details">
+                    <span>4 beds</span>
+                    <span>•</span>
+                    <span>3 baths</span>
+                    <span>•</span>
+                    <span>2,800 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 7 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&h=600&fit=crop"
+                    alt="Contemporary home at 888 Birch Street"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$975,000</div>
+                  <div class="listing-address">888 Birch Street</div>
+                  <div class="listing-details">
+                    <span>5 beds</span>
+                    <span>•</span>
+                    <span>4 baths</span>
+                    <span>•</span>
+                    <span>3,500 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 8 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=800&h=600&fit=crop"
+                    alt="Stunning home at 999 Willow Way"
+                    loading="lazy"
+                  />
+                  <span class="listing-badge">New</span>
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$1,295,000</div>
+                  <div class="listing-address">999 Willow Way</div>
+                  <div class="listing-details">
+                    <span>5 beds</span>
+                    <span>•</span>
+                    <span>5 baths</span>
+                    <span>•</span>
+                    <span>4,200 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 9 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=800&h=600&fit=crop"
+                    alt="Elegant home at 246 Sunset Boulevard"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$715,000</div>
+                  <div class="listing-address">246 Sunset Boulevard</div>
+                  <div class="listing-details">
+                    <span>4 beds</span>
+                    <span>•</span>
+                    <span>3 baths</span>
+                    <span>•</span>
+                    <span>2,300 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 10 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&h=600&fit=crop"
+                    alt="Beautiful home at 135 Heritage Drive"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$545,000</div>
+                  <div class="listing-address">135 Heritage Drive</div>
+                  <div class="listing-details">
+                    <span>3 beds</span>
+                    <span>•</span>
+                    <span>2 baths</span>
+                    <span>•</span>
+                    <span>1,900 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 11 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&h=600&fit=crop"
+                    alt="Modern home at 468 Parkview Circle"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$1,075,000</div>
+                  <div class="listing-address">468 Parkview Circle</div>
+                  <div class="listing-details">
+                    <span>5 beds</span>
+                    <span>•</span>
+                    <span>4 baths</span>
+                    <span>•</span>
+                    <span>3,800 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Listing Card 12 -->
+            <article class="listing-card">
+              <a href="listing.html" class="listing-link">
+                <div class="listing-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800&h=600&fit=crop"
+                    alt="Charming home at 579 Lakeview Terrace"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="listing-info">
+                  <div class="listing-price">$665,000</div>
+                  <div class="listing-address">579 Lakeview Terrace</div>
+                  <div class="listing-details">
+                    <span>4 beds</span>
+                    <span>•</span>
+                    <span>3 baths</span>
+                    <span>•</span>
+                    <span>2,200 sqft</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="listing-cta">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Didn't Find What You're Looking For?</h2>
+            <p>
+              I have access to off-market listings and new properties before
+              they hit the market. Let's set up a custom search that matches
+              exactly what you need.
+            </p>
+            <button
+              class="btn btn-primary"
+              onclick="openModal('customSearchModal')"
+            >
+              Set Up a Custom Search
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>[Agent Name]</h3>
+            <p>Your trusted real estate expert in [City Name]</p>
+            <div class="footer-contact">
+              <p><a href="tel:+15555551234">555-555-1234</a></p>
+              <p><a href="mailto:agent@example.com">agent@example.com</a></p>
+              <p>123 Business Street<br />[City], [State] 12345</p>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="listings.html">Listings</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="neighborhood.html">Neighborhoods</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <p>© 2025 [Agent Name]. All rights reserved.</p>
+            <p class="footer-disclaimer">
+              Licensed Real Estate Agent in [State]. MLS Member. Equal Housing
+              Opportunity.
+            </p>
+          </div>
+          <div class="footer-logos">
+            <img
+              src="https://via.placeholder.com/80x60?text=EHO"
+              alt="Equal Housing Opportunity"
+              loading="lazy"
+            />
+            <img
+              src="https://via.placeholder.com/80x60?text=MLS"
+              alt="MLS Member"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: Custom Search -->
+    <div
+      id="customSearchModal"
+      class="modal"
+      role="dialog"
+      aria-labelledby="customSearchModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <button
+          class="modal-close"
+          onclick="closeModal('customSearchModal')"
+          aria-label="Close modal"
+        >
+          &times;
+        </button>
+        <h2 id="customSearchModalTitle">Get Listing Alerts</h2>
+        <p>Join my VIP list and get alerts before homes hit the market.</p>
+        <form class="modal-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="search-name">Name *</label>
+            <input type="text" id="search-name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="search-email">Email *</label>
+            <input type="email" id="search-email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="search-phone">Phone *</label>
+            <input type="tel" id="search-phone" name="phone" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Get Early Access
+          </button>
+          <p class="form-note">
+            Your information is safe. I'll never spam you.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
