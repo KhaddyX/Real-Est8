@@ -32,7 +32,7 @@ A modern, responsive landing page designed for a real estate agent. This project
 
 The design is fully responsive, accessible, and optimized for performance with lazy-loaded images and semantic HTML.
 
----
+--
 
 ## Features
 
