@@ -2,7 +2,7 @@
 
 A modern, responsive landing page designed for a real estate agent. This project provides a professional online presence to showcase listings, neighborhood expertise, client testimonials, and capture leads through a home valuation modal.
 
-![Real Est8 Preview](https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=630&fit=crop)
+![Real Est8 Preview](https://khaddyx.github.io/Real-Est8/?w=1200&h=630&fit=crop)
 
 ---
 
